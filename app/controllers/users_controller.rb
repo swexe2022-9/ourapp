@@ -10,12 +10,15 @@ class UsersController < ApplicationController
   
   def create
   @users = User.new(
-  uid: params[:user][:uid], 
-  pass: params[:user][:password],
+  uname: params[:user][:uname], 
+  password: params[:user][:password],
+  password_confirmation: params[:user][:password_confirmation],
   email: params[:user][:email])
   
     if @users.save
-      redirect_to '/users/main'
+      session[:uname] = params[:uname]
+      session[:pass] = params[:pass]
+      redirect_to root_path
   
     
     else 

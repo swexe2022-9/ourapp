@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2022_11_09_081408) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "uid"
+    t.string "uname"
     t.string "email"
     t.string "pass"
     t.datetime "created_at", null: false

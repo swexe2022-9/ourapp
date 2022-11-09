@@ -1,2 +1,3 @@
 class ThreadsController < ApplicationController
+
 end
